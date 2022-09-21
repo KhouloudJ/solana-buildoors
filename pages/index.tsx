@@ -32,13 +32,7 @@ const Home: NextPage = () => {
             {connected ? <Connected /> : <Disconnected />}
 
             <Box marginBottom={4} color="white">
-              <a
-                href="https://twitter.com/khdjbn"
-                target="_blank"
-                rel="noopener norefferrer"
-              >
-                Build with @khdjbn
-              </a>
+              <a href="https://twitter.com/khdjbn">Build with @khdjbn</a>
             </Box>
           </Center>
         </Stack>

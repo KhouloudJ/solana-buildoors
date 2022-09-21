@@ -5,8 +5,12 @@ import styles from "../styles/Home.module.css";
 import { Box, Center, Spacer, Stack } from "@chakra-ui/react";
 import NavBar from "../components/NavBar"
 import Disconnected from "../components/Disconnected";
+import Connected from "../components/Connected";
+import { useWalletModal } from "@solana/wallet-adapter-react-ui";
+import { useWallet } from "@solana/wallet-adapter-react";
 
 const Home: NextPage = () => {
+  const {connected } = useWallet()
   return (
     <div className={styles.container}>
       <Head>
@@ -17,24 +21,25 @@ const Home: NextPage = () => {
       <Box
         w="full"
         h="calc(100vh)"
-        bgImage={"url(/home-background.svg)"}
+        bgImage={connected ? "" : "url(/home-background.svg)"}
         backgroundPosition="center"
       >
         <Stack w="full" h="calc(100vh)" justify="center">
-          <NavBar/>
+          <NavBar />
           <Spacer />
-          <Spacer />
+
           <Center>
-            <Disconnected/>
-          <Box marginBottom={4} color="white">
-            <a
-              href="https://twitter.com/khdjbn"
-              target="_blank"
-              rel="noopener norefferrer"
-            >
-              Build with @khdjbn
-            </a>
-          </Box>
+            {connected ? <Connected /> : <Disconnected />}
+
+            <Box marginBottom={4} color="white">
+              <a
+                href="https://twitter.com/khdjbn"
+                target="_blank"
+                rel="noopener norefferrer"
+              >
+                Build with @khdjbn
+              </a>
+            </Box>
           </Center>
         </Stack>
       </Box>

@@ -26,15 +26,17 @@ const Home: NextPage = () => {
       >
         <Stack w="full" h="calc(100vh)" justify="center">
           <NavBar />
-          <Spacer />
+      
+          <Spacer>
 
           <Center>
+            
             {connected ? <Connected /> : <Disconnected />}
-
-            <Box marginBottom={4} color="white">
-              <a href="https://twitter.com/khdjbn">Build with @khdjbn</a>
-            </Box>
+          
           </Center>
+          </Spacer>
+
+
         </Stack>
       </Box>
     </div>

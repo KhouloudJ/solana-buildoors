@@ -42,7 +42,7 @@ const Connected: FC = () => {
         <Image src="avatar5.png" alt="" />
       </HStack>
       <Button bgColor="accent" color="white" maxW="380px">
-          <Text>Mint Buildoor</Text>
+        <Text>Mint Buildoor</Text>
       </Button>
     </VStack>
   );

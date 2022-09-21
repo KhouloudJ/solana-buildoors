@@ -43,7 +43,7 @@ const Disconnected: FC = () => {
           maxW="380px"
           onClick={handleClick}
         >
-          {" "}
+          {""}
           <HStack>
             <Text>Become a Buildoor</Text>
             <ArrowForwardIcon />

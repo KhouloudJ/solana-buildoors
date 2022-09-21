@@ -17,7 +17,6 @@ const WalletConextProvider: FC<{ children: ReactNode }> = ({ children }) => {
       <WalletProvider wallets={[phantom]}>
       <WalletModalProvider>
           {children}
-
       </WalletModalProvider>
       </WalletProvider>
   </ConnectionProvider>);

@@ -23,7 +23,7 @@ const Disconnected: FC = () => {
           connect().catch(() => {})
       }
     },
-    []
+    [wallet, connect, modalState]
   );
   return (
     <Container>

@@ -3,6 +3,9 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { Box, Center, Spacer, Stack } from "@chakra-ui/react";
+import NavBar from "../components/NavBar"
+import Disconnected from "../components/Disconnected";
+
 const Home: NextPage = () => {
   return (
     <div className={styles.container}>
@@ -18,10 +21,11 @@ const Home: NextPage = () => {
         backgroundPosition="center"
       >
         <Stack w="full" h="calc(100vh)" justify="center">
-          {/* {NavBar} */}
+          <NavBar/>
           <Spacer />
           <Spacer />
           <Center>
+            <Disconnected/>
           <Box marginBottom={4} color="white">
             <a
               href="https://twitter.com/khdjbn"
